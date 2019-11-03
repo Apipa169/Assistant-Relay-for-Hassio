@@ -1,0 +1,3 @@
+cd /assistant_relay
+echo Assistant Relay is now starting...
+npm run start

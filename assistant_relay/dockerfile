@@ -1,0 +1,21 @@
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
+ENV LANG C.UTF-8
+
+RUN apk add --no-cache npm \
+&& npm i pm2 -g \
+&& mkdir /assistant_relay
+
+WORKDIR /assistant_relay
+
+RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.0.3/release.zip \
+&& unzip release.zip \
+&& rm release.zip \
+&& npm i
+
+WORKDIR /data
+
+COPY run.sh /
+RUN chmod a+x /run.sh
+CMD [ "/run.sh" ]
