@@ -1,5 +1,5 @@
 # Assistant Relay for Hassio
-This addon brings Assistant Relay (by greghesp) to Hass.io.
+This add-on brings Assistant Relay (by greghesp) to Hass.io.
 
 > Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.
 
@@ -10,10 +10,9 @@ This addon brings Assistant Relay (by greghesp) to Hass.io.
 
 ### Usage
 
-
-1. Add https://github.com/Apipa169/Assistant-Relay-for-Hassio in the addon store.
-2. Install the addon
-3. Start the addon and open the addon in your browser: http://[IP]:[PORT]
+1. Add https://github.com/Apipa169/Assistant-Relay-for-Hassio in the add-on store.
+2. Install the add-on
+3. Start the add-on and open the add-on in your browser: http://[IP]:[PORT]
 4. Follow the instructions in the browser.
 5. You can now use Assistant Relay.
 
