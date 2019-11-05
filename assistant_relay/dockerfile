@@ -12,9 +12,13 @@ WORKDIR /assistant_relay
 RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.0.3/release.zip \
 && unzip release.zip \
 && rm release.zip \
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/server.js \
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/assistant.js \
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/auth.js \
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/index.js \
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js \
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/bin/www \
 && npm i
-
-WORKDIR /data
 
 COPY run.sh /
 RUN chmod a+x /run.sh
