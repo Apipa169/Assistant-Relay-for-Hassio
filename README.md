@@ -1,5 +1,5 @@
 # Assistant Relay for Hassio
-This addon brings Assistant Relay to Hass.io
+This addon brings Assistant Relay (by greghesp) to Hass.io.
 
 > Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.
 
@@ -26,7 +26,8 @@ rest_command:
   my_broadcast:
     url: http://<ip_address>:<port>/assistant
     method: POST
-    content-type: application/json
+    headers:
+      content-type: 'application/json; charset=utf-8'
     payload: '{"command":"hello world", "user":"greg", "broadcast":"true"}'
 ```
 
