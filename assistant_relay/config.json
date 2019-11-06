@@ -1,8 +1,8 @@
 {
   "name": "Assistant Relay",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "slug": "assistant_relay",
-  "description": "Send commands to your Google Assistant via REST command",
+  "description": "Send (broadcast) commands to your Google Assistant via REST command",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "before",
   "url": "https://github.com/Apipa169/Assistant-Relay-for-Hassio",
