@@ -30,7 +30,7 @@ rest_command:
     payload: '{"command":"hello world", "user":"greg", "broadcast":"true"}'
 ```
 
-*User needs to be de user you used in the setup.*
+*User needs to be the user you used in the setup.*
 
 How to use Home Assistant's RESTful command check: https://www.home-assistant.io/integrations/rest_command/
 
