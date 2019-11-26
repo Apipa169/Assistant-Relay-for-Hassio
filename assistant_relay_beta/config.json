@@ -1,0 +1,18 @@
+{
+  "name": "Assistant Relay",
+  "version": "0.6",
+  "slug": "assistant_relay_beta",
+  "description": "Send (broadcast) commands to your Google Assistant via REST command",
+  "arch": ["amd64"],
+  "startup": "before",
+  "url": "https://github.com/Apipa169/Assistant-Relay-for-Hassio",
+  "boot": "auto",
+  "webui":"http://[HOST]:[PORT:3000]",
+  "options": {
+  },
+  "schema": {},
+  "ports": {
+    "3000/tcp": 3000
+  },
+  "image": "apipa169/{arch}-hassio-assistant_relay"
+}
