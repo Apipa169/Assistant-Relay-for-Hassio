@@ -1,5 +1,5 @@
 {
-  "name": "Assistant Relay",
+  "name": "Assistant Relay BETA",
   "version": "0.6",
   "slug": "assistant_relay_beta",
   "description": "Send (broadcast) commands to your Google Assistant via REST command",
