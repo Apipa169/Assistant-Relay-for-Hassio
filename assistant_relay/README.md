@@ -48,8 +48,8 @@ rest_command:
 
 How to use Home Assistant's RESTful command check: https://www.home-assistant.io/integrations/rest_command/
 
-#####Node Red Example
-Simple flow for Node Red. Don't forget to chenge the IP address, port and user!
+##### Node Red Example
+Simple flow for Node Red. Don't forget to change the IP address, port and user!
 ```json
 [{"id":"cb8e2985.0fd68","type":"comment","z":"e0fa9d52.876058","name":"Broadcast via Google Home","info":"","x":180,"y":180,"wires":[]},{"id":"37f701c2.826d96","type":"delay","z":"e0fa9d52.876058","name":"","pauseType":"rate","timeout":"5","timeoutUnits":"seconds","rate":"1","nbRateUnits":"10","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":true,"x":320,"y":220,"wires":[["d087aae2.ab98e"]]},{"id":"eba065b9.0d066","type":"http request","z":"e0fa9d52.876058","name":"post","method":"POST","ret":"obj","paytoqs":false,"url":"http://192.168.1.2:3000/assistant","tls":"","persist":false,"proxy":"","authType":"","x":730,"y":220,"wires":[[]]},{"id":"d087aae2.ab98e","type":"function","z":"e0fa9d52.876058","name":"set payload and headers","func":"msg.message = msg.payload;\nmsg.payload = {\n    \"name\": \"username\",\n    \"command\": msg.message,\n    \"broadcast\": true\n};\nmsg.headers = {};\nmsg.headers['Content-Type'] = 'application/json';\nreturn msg;","outputs":1,"noerr":0,"x":530,"y":220,"wires":[["eba065b9.0d066"]]},{"id":"e63ec3ee.7abb68","type":"inject","z":"e0fa9d52.876058","name":"","topic":"","payload":"Hello everyone!","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":140,"y":220,"wires":[["37f701c2.826d96"]]}]
 ```
