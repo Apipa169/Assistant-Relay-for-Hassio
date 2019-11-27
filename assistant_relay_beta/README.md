@@ -1,39 +1,37 @@
-# Assistant Relay for Hassio
-This add-on brings Assistant Relay (by greghesp) to Hass.io.
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
 
-> Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.
+## Assistant Relay for Hassio BETA
+This add-on brings Assistant Relay (by greghesp) to Hass.io. !This is the beta version!
 
-> Send Assistant Relay any query you would send the Google Assistant SDK, and get a response back.
+Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.
 
-> It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.
+Send Assistant Relay any query you would send the Google Assistant SDK, and get a response back.
 
-
-### Usage
-
-1. Add https://github.com/Apipa169/Assistant-Relay-for-Hassio in the add-on store.
-2. Install the add-on
-3. Start the add-on and open the add-on in your browser: http://[IP]:[PORT]
-4. Follow the instructions in the browser.
-5. You can now use Assistant Relay.
+It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.
 
 
-#### Example
-Example command to broadcast.
-```yaml
-# Example configuration.yaml entry
-rest_command:
-  my_broadcast:
-    url: http://<ip_address>:<port>/assistant
-    method: POST
-    headers:
-      content-type: 'application/json; charset=utf-8'
-    payload: '{"command":"hello world", "user":"greg", "broadcast":"true"}'
-```
+##### Installation
 
-*User needs to be the user you used in the setup.*
+1. Install the add-on
+2. Start the add-on and open it in your browser: http://[IP]:[PORT]
+3. Follow the instructions in the browser.
+4. You can now use Assistant Relay.
 
-How to use Home Assistant's RESTful command check: https://www.home-assistant.io/integrations/rest_command/
+(the IP must be the IP address of your system, not the one mentioned in the log as this is the adress of the container)
 
+##### Examples
+Examples of how to send commands to Assistant Relay via HA can be found here: https://github.com/Apipa169/Assistant-Relay-for-Hassio
 
-### More info
-Check the repository of Assistant Relay for more: https://github.com/greghesp/assistant-relay
+[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
+
+[buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
+[buymeacoffee]: https://www.buymeacoffee.com/apipa
+[aarch64-shield]: https://img.shields.io/badge/aarch64-no-red.svg
+[amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
+[i386-shield]: https://img.shields.io/badge/i386-no-red.svg
