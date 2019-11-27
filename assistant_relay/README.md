@@ -20,5 +20,6 @@ It also supports the Google Home Broadcast command so you can send audio notific
 ###### Examples
 Examples of how to send commands to Assistant Relay via HA can be found here: https://github.com/Apipa169/Assistant-Relay-for-Hassio
 
-<a href="https://www.buymeacoffee.com/Apipa" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 170px !important;" ></a>
-
+[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
+[buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
+[buymeacoffee]: https://www.buymeacoffee.com/apipa
