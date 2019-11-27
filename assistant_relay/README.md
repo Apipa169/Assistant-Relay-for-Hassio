@@ -1,39 +1,24 @@
-# Assistant Relay for Hassio
+## Assistant Relay for Hassio
 This add-on brings Assistant Relay (by greghesp) to Hass.io.
 
-> Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.
+Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.
 
-> Send Assistant Relay any query you would send the Google Assistant SDK, and get a response back.
+Send Assistant Relay any query you would send the Google Assistant SDK, and get a response back.
 
-> It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.
-
-
-### Usage
-
-1. Add https://github.com/Apipa169/Assistant-Relay-for-Hassio in the add-on store.
-2. Install the add-on
-3. Start the add-on and open the add-on in your browser: http://[IP]:[PORT]
-4. Follow the instructions in the browser.
-5. You can now use Assistant Relay.
+It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.
 
 
-#### Example
-Example command to broadcast.
-```yaml
-# Example configuration.yaml entry
-rest_command:
-  my_broadcast:
-    url: http://<ip_address>:<port>/assistant
-    method: POST
-    headers:
-      content-type: 'application/json; charset=utf-8'
-    payload: '{"command":"hello world", "user":"greg", "broadcast":"true"}'
-```
+##### Installation
 
-*User needs to be the user you used in the setup.*
+1. Install the add-on
+2. Start the add-on and open it in your browser: http://[IP]:[PORT]
+3. Follow the instructions in the browser.
+4. You can now use Assistant Relay.
 
-How to use Home Assistant's RESTful command check: https://www.home-assistant.io/integrations/rest_command/
+(the IP must be the IP address of your system, not the one mentioned in the log as this is the adress of the container)
 
+###### Examples
+Examples of how to send commands to Assistant Relay via HA can be found here: https://github.com/Apipa169/Assistant-Relay-for-Hassio
 
-### More info
-Check the repository of Assistant Relay for more: https://github.com/greghesp/assistant-relay
+<a href="https://www.buymeacoffee.com/Apipa" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 170px !important;" ></a>
+
