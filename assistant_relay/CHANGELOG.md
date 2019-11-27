@@ -1,7 +1,4 @@
-## 5.5
-Moving to a different base image to support armv7 (Raspberry Pi). 
+## 6.3
+This add-on is now using a new image. This makes the installation more stable and faster.
 
-## 5.4:
-This update changes the location of the audio responses which are showed in the webinterface. This fix the issue that they get lost after en restart or update.
-
-It is not required to do the setup again to keep using this addon, but to get the audio responses in the webinterface working you have to reinstall and reconfigure.
+It also updates Assistant Relay to version 3.0.5
