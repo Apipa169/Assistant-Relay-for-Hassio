@@ -22,7 +22,7 @@ It also supports the Google Home Broadcast command so you can send audio notific
 3. Follow the instructions in the browser.
 4. You can now use Assistant Relay.
 
-(the IP must be the IP address of your system, not the one mentioned in the log as this is the adress of the container)
+(the IP must be the IP address of your system, not the one mentioned in the log as this is the address of the container)
 
 ##### Examples
 Examples of how to send commands to Assistant Relay via HA can be found here: https://github.com/Apipa169/Assistant-Relay-for-Hassio
