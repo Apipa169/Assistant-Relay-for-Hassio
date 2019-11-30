@@ -26,6 +26,7 @@ It also supports the Google Home Broadcast command so you can send audio notific
 *(the IP must be the IP address of your system, not the one mentioned in the log as this is the adress of the container. The port is 3000 by default)*
 
 **Changing the port number**
+
 If you want to change the port of Assistant Relay, please do this in the add-on settings and leave the Assistant Relay setting on port 3000. 
 
 
@@ -35,17 +36,44 @@ User needs always to be the user you used in the setup of AR. Multiple users is 
 ##### Home Assistant REST
 Example command to broadcast via a rest command.
 ```yaml
-# Example configuration.yaml entry
+# Example configuration.yaml
 rest_command:
-  my_broadcast:
-    url: http://<ip_address>:<port>/assistant
+  assistant_broadcast:
+    url: http://192.168.10.2:3000/assistant
     method: POST
-    headers:
-      content-type: 'application/json; charset=utf-8'
-    payload: '{"command":"hello world", "user":"greg", "broadcast":"true"}'
-```
+    content_type: 'application/json'
+    payload: '{"command":"{{ command }}", "user":"username", "broadcast":true}'
+    
+  assistant_converse:
+    url: http://192.168.10.2:3000/assistant
+    method: POST
+    content_type: 'application/json'
+    payload: '{"command":"{{ command }}", "user":"username", "converse":true}'
 
-How to use Home Assistant's RESTful command check: https://www.home-assistant.io/integrations/rest_command/
+  assistant_relay:
+    url: http://192.168.10.2:3000/assistant
+    method: POST
+    content_type: 'application/json'
+    payload: '{"command":"{{ command }}", "user":"username"}'
+```
+```yaml
+# Example test lovelace card
+type: entities
+entities:
+  - action_name: Broadcast
+    name: test broadcast
+    service: rest_command.assistant_broadcast
+    type: call-service
+    service_data:
+      command: hello, this is a test broadcast
+```
+```yaml
+# Automation action example (just fill in "command: hello" if you are using the editor)
+  action:
+  - data:
+      command: hello
+    service: rest_command.assistant_broadcast
+```
 
 ##### Node Red Example
 Simple flow for Node Red. Don't forget to change the IP address, port and user!
