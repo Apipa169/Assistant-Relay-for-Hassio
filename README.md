@@ -15,7 +15,7 @@ Assistant Relay is a Node.js server that exposes the Google Assistant as a REST 
 It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.
 
 
-#### Usage
+## Usage
 
 1. Add https://github.com/Apipa169/Assistant-Relay-for-Hassio in the add-on store.
 2. Install the add-on
@@ -30,10 +30,10 @@ It also supports the Google Home Broadcast command so you can send audio notific
 If you want to change the port of Assistant Relay, please do this in the add-on settings and leave the Assistant Relay setting on port 3000. 
 
 
-#### Examples
+## Examples
 User needs always to be the user you used in the setup of AR. Multiple users is suported by AR.
 
-##### Home Assistant REST
+### Home Assistant REST
 Example command to broadcast via a rest command.
 ```yaml
 # Example configuration.yaml
@@ -75,15 +75,15 @@ entities:
     service: rest_command.assistant_broadcast
 ```
 
-##### Node Red Example
+### Node Red Example
 Simple flow for Node Red. Don't forget to change the IP address, port and user!
 ```json
 [{"id":"cb8e2985.0fd68","type":"comment","z":"e0fa9d52.876058","name":"Broadcast via Google Home","info":"","x":180,"y":180,"wires":[]},{"id":"37f701c2.826d96","type":"delay","z":"e0fa9d52.876058","name":"","pauseType":"rate","timeout":"5","timeoutUnits":"seconds","rate":"1","nbRateUnits":"10","rateUnits":"second","randomFirst":"1","randomLast":"5","randomUnits":"seconds","drop":true,"x":320,"y":220,"wires":[["d087aae2.ab98e"]]},{"id":"eba065b9.0d066","type":"http request","z":"e0fa9d52.876058","name":"post","method":"POST","ret":"obj","paytoqs":false,"url":"http://192.168.1.2:3000/assistant","tls":"","persist":false,"proxy":"","authType":"","x":730,"y":220,"wires":[[]]},{"id":"d087aae2.ab98e","type":"function","z":"e0fa9d52.876058","name":"set payload and headers","func":"msg.message = msg.payload;\nmsg.payload = {\n    \"name\": \"username\",\n    \"command\": msg.message,\n    \"broadcast\": true\n};\nmsg.headers = {};\nmsg.headers['Content-Type'] = 'application/json';\nreturn msg;","outputs":1,"noerr":0,"x":530,"y":220,"wires":[["eba065b9.0d066"]]},{"id":"e63ec3ee.7abb68","type":"inject","z":"e0fa9d52.876058","name":"","topic":"","payload":"Hello everyone!","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":140,"y":220,"wires":[["37f701c2.826d96"]]}]
 ```
 
 
-#### More info
-This add-on is using Assistant Relay. Check the repository for more info: https://github.com/greghesp/assistant-relay
+## More about Assistant Relay
+This add-on is using (the awesome program) Assistant Relay. Check the repository for more info: https://github.com/greghesp/assistant-relay
 
 
 
