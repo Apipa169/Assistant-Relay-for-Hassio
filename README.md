@@ -25,8 +25,7 @@ It also supports the Google Home Broadcast command so you can send audio notific
 
 *(the IP must be the IP address of your system, not the one mentioned in the log as this is the adress of the container. The port is 3000 by default)*
 
-**Changing the port number**
-
+##### Changing the port number
 If you want to change the port of Assistant Relay, please do this in the add-on settings and leave the Assistant Relay setting on port 3000. 
 
 
