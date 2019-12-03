@@ -24,6 +24,7 @@ RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.0.6/re
 && sed -i -e 's#bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js \
 && npm i
 
-COPY run.sh /
+WORKDIR /
+RUN wget https://raw.githubusercontent.com/Apipa169/Assistant-Relay-for-Hassio/master/docker%20files/amd64/run.sh
 RUN chmod a+x /run.sh
 CMD [ "/run.sh" ]
