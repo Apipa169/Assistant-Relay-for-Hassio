@@ -1,6 +1,6 @@
 {
   "name": "Assistant Relay BETA",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "slug": "assistant_relay_beta",
   "description": "Send (broadcast) commands to your Google Assistant via REST command",
   "arch": ["amd64", "armv7"],
