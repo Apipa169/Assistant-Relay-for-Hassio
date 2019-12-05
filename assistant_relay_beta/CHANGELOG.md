@@ -1,17 +1,10 @@
-## 0.6.6
-Rollback to AR v3.0.5
+## 0.7
+Upgrade to Assistant Relay v3.1.2
 
-This solves the blank page during the set up. 
+- Fixed a bug that prevented OAuth from working
 
-## 0.6.5
-Update to Assistant Relay v3.1.0
+Changes in earlier versions, which is also new in this add-on:
 
-Release Notes notes:
+- Fixed a bug that stopped commands from working
 - Fixed a bug that prevented the configuration being saved
 - Removed the need for the user to enter the server IP and port
-
-## 0.6.4
-Update to Assistant Relay v3.0.6
-
-Release Notes notes:
-- Fixed a bug that set invalid date when clearing quiet hours times
