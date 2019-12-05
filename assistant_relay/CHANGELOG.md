@@ -1,3 +1,8 @@
+## 0.6.6
+Rollback to AR v3.0.5
+
+This solves the blank page during the set up. 
+
 ## 0.6.5
 Update to Assistant Relay v3.1.0
 
