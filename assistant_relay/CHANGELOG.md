@@ -1,3 +1,6 @@
+## 0.7.1
+Temp fix for issue #9 Cannot destructure property `user`
+
 ## 0.7
 Upgrade to Assistant Relay v3.1.2
 
