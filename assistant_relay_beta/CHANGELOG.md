@@ -1,3 +1,8 @@
+## 0.7.3
+Update to Assistant Relay v3.1.4
+
+- Fix play button not working remotely
+
 ## 0.7.2
 Update to Assistant Relay v3.1.3
 
