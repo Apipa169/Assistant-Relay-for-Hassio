@@ -1,5 +1,3 @@
-cd /assistant_relay
-  
 ARDIR="/data/audio-responses"
 if [ ! -d "$ARDIR" ]; then
         echo Creating an audio-responses folder... This needs to be done once. 
