@@ -1,5 +1,5 @@
 ARG BUILD_FROM
-FROM node:lts-alpine
+FROM node
 
 ENV LANG C.UTF-8
 
