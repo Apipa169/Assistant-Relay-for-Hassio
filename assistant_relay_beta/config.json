@@ -9,10 +9,11 @@
   "boot": "auto",
   "webui":"http://[HOST]:[PORT:3000]",
   "options": {
+    "port": 3000
   },
-  "schema": {},
-  "ports": {
-    "3000/tcp": 3000
+  "schema": {
+    "port": "int"
   },
+  "host_network": true,
   "image": "apipa169/{arch}-hassio-assistant_relay"
 }
