@@ -1,4 +1,4 @@
-## 0.7.7b
+## 0.7.8b
 **BREAKING CHANGE!** The port needs to be configured in the add-on setting now. This change is required to support the new cast functionality.
 
 Update to Assistant Relay v3.3.1b (beta)
