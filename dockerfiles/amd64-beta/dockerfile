@@ -10,6 +10,8 @@ RUN apk add python3 \
 RUN mkdir /assistant_relay \
 && npm i pm2 -g
 
+WORKDIR /assistant_relay
+
 RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.3.1b/release.zip \
 && unzip release.zip \
 && rm release.zip 
