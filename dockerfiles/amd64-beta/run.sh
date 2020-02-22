@@ -10,7 +10,7 @@ fi
 
 if [ -f $CONFIG ]; then
         echo "File $CONFIG exists. Setting config."
-        cat config.json|jq --arg port "$PORT" '.port = $port' /data/config.json|less -E
+        cat /data/config.json|jq --arg port "$PORT" '.port = $port' /data/config.json|less -E
 else
         echo Creating configfile.... 
         jq -n --arg port "$PORT" '{port:$port}' > /data/config.json
