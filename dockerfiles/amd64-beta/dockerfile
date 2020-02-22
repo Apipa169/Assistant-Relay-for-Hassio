@@ -11,25 +11,22 @@ RUN mkdir /assistant_relay \
 
 WORKDIR /assistant_relay
 
-RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.3.1b/release.zip \
-&& unzip release.zip \
-&& rm release.zip \
-&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/server.js \
-&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/assistant.js \
-&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/auth.js \
-&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/index.js \
-&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js \
-&& sed -i -e 's#./bin/config.json#/data/config.json#g' /routes/cast.js \
-&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js \
-&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/bin/www \
-&& sed -i -e 's#config.json#/data/config.json#g' /bin/registerDevice.js \
-&& sed -i -e 's#../bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js \
-&& sed -i -e 's#../bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/routes/server.js \
-&& sed -i -e 's#bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js \
-&& npm i
-
-
-
+RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.3.1b/release.zip
+RUN unzip release.zip
+RUN rm release.zip
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/server.js
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/assistant.js
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/auth.js
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/index.js
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/cast.js
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/bin/www
+RUN sed -i -e 's#config.json#/data/config.json#g' /assistant_relay/bin/registerDevice.js
+RUN sed -i -e 's#../bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js
+RUN sed -i -e 's#../bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/routes/server.js
+RUN sed -i -e 's#bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js
+RUN npm i
 
 
 

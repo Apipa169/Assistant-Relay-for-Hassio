@@ -13,7 +13,7 @@ if [ -f $CONFIG ]; then
         echo "File $CONFIG exists."
 else
         echo Creating configfile.... 
-        jq -n --arg port "$PORT" '{port:${appname}}` > /data/config.json   
+        jq -n --arg port "$PORT" "{port:${port}}" > /data/config.json   
 fi
 
 
