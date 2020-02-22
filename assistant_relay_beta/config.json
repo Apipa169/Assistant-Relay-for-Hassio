@@ -8,7 +8,6 @@
   "url": "https://github.com/Apipa169/Assistant-Relay-for-Hassio",
   "boot": "auto",
   "webui":"http://[HOST]:[PORT:3000]",
-  "host_network": true,
   "options": {
   },
   "schema": {},
