@@ -11,7 +11,7 @@ if [ -f $CONFIG ]; then
         echo $(cat /data/config.json | jq --arg port "$PORT" '.port = $port') > /data/config.json
 else
         echo Creating config file voor Assistant Relay
-        
+        jq -n --arg port "$PORT" '{port:$port}' > /data/config.json
 fi
 cd /assistant_relay
 echo Assistant Relay is starting...
