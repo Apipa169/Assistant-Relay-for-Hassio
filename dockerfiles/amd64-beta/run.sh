@@ -8,7 +8,7 @@ if [ ! -d "$AUDIORESPONSE" ]; then
 fi
 if [ -f $CONFIG ]; then
         echo Set port number in Assistant Relay settings
-        echo $(cat config.json | jq --arg port "$PORT" '.port = $port') > /data/config.json
+        echo $(cat /data/config.json | jq --arg port "$PORT" '.port = $port') > /data/config.json
 else
         echo Creating config file voor Assistant Relay
         
