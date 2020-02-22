@@ -10,7 +10,7 @@ RUN mkdir /assistant_relay \
 
 WORKDIR /assistant_relay
 
-RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.3.0b/release.zip \
+RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.3.1b/release.zip \
 && unzip release.zip \
 && rm release.zip \
 && sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/server.js \
