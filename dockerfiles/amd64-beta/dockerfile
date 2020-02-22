@@ -4,32 +4,30 @@ FROM node:lts-alpine
 ENV LANG C.UTF-8
 
 RUN apk add python3 \
-&& apk add jq
+&& apk add jq \
+&& pip3 install catt
 
 RUN mkdir /assistant_relay \
 && npm i pm2 -g
 
-WORKDIR /assistant_relay
-
 RUN wget https://github.com/greghesp/assistant-relay/releases/download/v3.3.1b/release.zip
-RUN unzip release.zip
-RUN rm release.zip
-RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/server.js
-RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/assistant.js
-RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/auth.js
-RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/index.js
-RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js
-RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/cast.js
-RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js
-RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/bin/www
-RUN sed -i -e 's#config.json#/data/config.json#g' /assistant_relay/bin/registerDevice.js
-RUN sed -i -e 's#../bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js
-RUN sed -i -e 's#../bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/routes/server.js
-RUN sed -i -e 's#bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js
+&& unzip release.zip /
+&& rm release.zip 
+
+RUN sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/server.js /
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/assistant.js /
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/helpers/auth.js /
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/index.js /
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js /
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/cast.js /
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/routes/server.js /
+&& sed -i -e 's#./bin/config.json#/data/config.json#g' /assistant_relay/bin/www /
+&& sed -i -e 's#config.json#/data/config.json#g' /assistant_relay/bin/registerDevice.js /
+&& sed -i -e 's#../bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js /
+&& sed -i -e 's#../bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/routes/server.js /
+&& sed -i -e 's#bin/audio-responses/#/data/audio-responses/#g' /assistant_relay/helpers/server.js
+
 RUN npm i
-
-
-
 
 WORKDIR /
 RUN wget https://raw.githubusercontent.com/Apipa169/Assistant-Relay-for-Hassio/master/dockerfiles/amd64-beta/run.sh

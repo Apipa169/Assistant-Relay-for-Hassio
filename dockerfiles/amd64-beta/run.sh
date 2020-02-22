@@ -2,19 +2,17 @@ CONFIG_PATH=/data/options.json
 PORT=$(jq --raw-output ".port | length" $CONFIG_PATH)
 AUDIORESPONSE="/data/audio-responses"
 CONFIG="/data/config.json"
-
 if [ ! -d "$AUDIORESPONSE" ]; then
-        echo Creating an audio-responses folder... This needs to be done once. 
+        echo Creating a folder for audio-responses. This needs to be done once. 
         mkdir /data/audio-responses
 fi
-
 if [ -f $CONFIG ]; then
-        echo "File $CONFIG exists. Setting config."
+        echo "Assistant Relay config file:"
         cat /data/config.json|jq --arg port "$PORT" '.port = $port' /data/config.json|less -E
 else
-        echo Creating configfile.... 
-        jq -n --arg port "$PORT" '{port:$port}' > /data/config.json
+        echo Creating config file voor Assistant Relay
+        
 fi
 cd /assistant_relay
-echo Assistant Relay is now starting...
+echo Assistant Relay is starting...
 npm run start

@@ -1,6 +1,7 @@
-## 0.7.6b
-Update to Assistant Relay v3.3.1b (beta)
+## 0.7.7b
+**BREAKING CHANGE!** The port needs to be configured in the add-on setting now. This change is required to support the new cast functionality.
 
+Update to Assistant Relay v3.3.1b (beta)
 - Fixed Cast device scanning issue on Linux
 - Changed Cast Sandbox icon
 - Added cast force stopping
@@ -11,10 +12,3 @@ Update to Assistant Relay v3.3.0b (beta)
 
 - New documentation available (see https://greghesp.github.io/assistant-relay/)
 - Assistant Relay can now cast media (Please note, this is in beta and might break)
-
-
-## 0.7.4
-Update to Assistant Relay v3.2
-
-- Added the ability to delete a user
-- Updated About page
