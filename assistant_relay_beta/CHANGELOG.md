@@ -1,3 +1,11 @@
+## 0.7.6b
+Update to Assistant Relay v3.3.1b (beta)
+
+- Fixed Cast device scanning issue on Linux
+- Changed Cast Sandbox icon
+- Added cast force stopping
+- Fixed update notification bug
+
 ## 0.7.5b
 Update to Assistant Relay v3.3.0b (beta)
 
