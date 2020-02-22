@@ -1,3 +1,6 @@
+## 0.7.7b
+Change network mode to support Cast. Note: this is in beta.
+
 ## 0.7.6b
 Update to Assistant Relay v3.3.1b (beta)
 
