@@ -27,15 +27,3 @@ WORKDIR /
 RUN wget https://raw.githubusercontent.com/Apipa169/Assistant-Relay-for-Hassio/master/dockerfiles/amd64/run.sh
 RUN chmod a+x /run.sh
 CMD [ "/run.sh" ]
-
-LABEL \
-    io.hass.name="Assistant Relay" \
-    io.hass.description="Send (broadcast) commands to your Google Assistant via REST command" \
-    io.hass.arch="amd64" \
-    io.hass.type="addon" \
-    io.hass.version="0.9b" \
-    maintainer="Apipa169" \
-    org.label-schema.description="Send (broadcast) commands to your Google Assistant via REST command" \
-    org.label-schema.name="Assistant Relay" \
-    org.label-schema.usage="https://github.com/Apipa169/Assistant-Relay-for-Hassio/blob/master/README.md" \
-    org.label-schema.vcs-url="https://github.com/Apipa169/Assistant-Relay-for-Hassio" \
