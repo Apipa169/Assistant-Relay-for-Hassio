@@ -1,3 +1,7 @@
+## 0.9b
+Added labels to the image
+
+
 ## 0.8b
 **BREAKING CHANGE!** The port needs to be configured in the add-on setting now. This change is required to support the new cast functionality.
 
