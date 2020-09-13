@@ -14,6 +14,10 @@ Send Assistant Relay any query you would send the Google Assistant SDK, and get 
 
 It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.
 
+## Known v4 issues
+- Starting the add-on can be a bit slow. 
+- The first time you start the addon you will get the error "Error: Required port not given". A restart of the add-on will solve this.
+
 
 ##### Installation
 
@@ -34,6 +38,6 @@ Examples of how to send commands to Assistant Relay via HA can be found here: ht
 [aarch64-shield]: https://img.shields.io/badge/aarch64-no-red.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
 [maintained-shield]: https://img.shields.io/badge/maintained-yes-green.svg
