@@ -14,6 +14,6 @@ LABEL \
     org.label-schema.description="Send (broadcast) commands to your Google Assistant via REST command" \
     org.label-schema.name="Assistant Relay" \
     org.label-schema.usage="https://github.com/Apipa169/Assistant-Relay-for-Hassio/blob/master/README.md" \
-    org.label-schema.vcs-url="https://github.com/Apipa169/Assistant-Relay-for-Hassio" \
+    org.label-schema.vcs-url="https://github.com/Apipa169/Assistant-Relay-for-Hassio"
 
 CMD [ "/run.sh" ]
