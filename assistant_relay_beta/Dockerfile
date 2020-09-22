@@ -1,4 +1,4 @@
-FROM apipa169/assistant-relay:4.0.0b
+FROM apipa169/assistant-relay:4.0.0b2
 
 ENV LANG C.UTF-8
 ENV databasePath='/data/db.json'
@@ -9,7 +9,7 @@ LABEL \
     io.hass.name="Assistant Relay" \
     io.hass.description="Send (broadcast) commands to your Google Assistant via REST command" \
     io.hass.type="addon" \
-    io.hass.version="4.0.0b" \
+    io.hass.version="4.0.0b2" \
     maintainer="Apipa169" \
     org.label-schema.description="Send (broadcast) commands to your Google Assistant via REST command" \
     org.label-schema.name="Assistant Relay" \
