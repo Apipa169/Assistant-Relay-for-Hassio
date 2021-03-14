@@ -23,7 +23,7 @@ To use this add-on you need to have Hass.io running. If you are not using Hass.i
 
 1. Go to Supervisor in the sidebar and click on Add-on Store
 2. Add https://github.com/Apipa169/Assistant-Relay-for-Hassio under "repositories"
-2. The add-on Assistant Relay should now show up below. Clcik on it and click on "Install". This may take a while, depending on your internet and system speed.
+2. The add-on Assistant Relay should now show up below. Click on it and click on "Install". This may take a while, depending on your internet and system speed.
 
 ### Configuration
 
