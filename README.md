@@ -34,6 +34,7 @@ To use this add-on you need to have Hass.io running. If you are not using Hass.i
 5. You can now use Assistant Relay.
 
 *The IP must be the IP address of your system, not the one mentioned in the log as this is the address of the container. The port is 3000 by default*
+*Configure your client in Google Cloud Platform as Desktop app*
 
 ##### Changing the port number
 If you want to change the port of Assistant Relay, please do this in the add-on settings and leave the Assistant Relay setting on port 3000. 
