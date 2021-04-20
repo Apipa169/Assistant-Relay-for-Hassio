@@ -5,8 +5,6 @@
 ![Supports i386 Architecture][i386-shield]
 ![Maintained][maintained-shield]
 
-[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
-
 # Assistant Relay for Hassio
 This add-on brings Assistant Relay to Hass.io.
 
