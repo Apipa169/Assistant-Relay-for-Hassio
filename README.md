@@ -5,9 +5,14 @@
 ![Supports i386 Architecture][i386-shield]
 ![Maintained][maintained-shield]
 
-# No longer maintained
+# No longer maintained (do not use this add-on anymore!)
 
 Assistant Relay is no longer maintained, due to lack of time for the project of the creator of Assistant Relay. Also he has no personal need for Assistant Relay anymore. Therefore I have decided to stop maintaining the Docker image (and Hassio add-on) as well. The image will no longer be updated. That also means that the OS of the image will not be updated as well, including security updates.
+
+# Alternative
+There is an alternative which is even better. Home Assistant supports broadcasting (and sending other commands) to Google Assistant as of 2023.1.0. Please use that instead.
+
+Instructions can be found here: https://www.home-assistant.io/integrations/google_assistant_sdk/
 
 
 # Assistant Relay for Hassio
